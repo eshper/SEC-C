@@ -1,0 +1,76 @@
+# Blender 4.0.2 MTL File: 'base.blend'
+# www.blender.org
+
+newmtl Concrete
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd concrete_tiles_02_4k.blend/textures/concrete_tiles_02_diff_4k.jpg
+map_Ns concrete_tiles_02_4k.blend/textures/concrete_tiles_02_rough_4k.exr
+map_Bump -bm 1.000000 concrete_tiles_02_4k.blend/textures/concrete_tiles_02_nor_gl_4k.exr
+
+newmtl Material
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Material.004
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd beige_wall_001_2k.blend/textures/beige_wall_001_diff_2k.jpg
+map_Ns beige_wall_001_2k.blend/textures/beige_wall_001_rough_2k.jpg
+map_Bump -bm 1.000000 beige_wall_001_2k.blend/textures/beige_wall_001_nor_gl_2k.exr
+
+newmtl WhiteConcrete
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd concrete_wall_004_2k.blend/textures/concrete_wall_004_diff_2k.jpg
+map_Ns concrete_wall_004_2k.blend/textures/concrete_wall_004_rough_2k.exr
+map_Bump -bm 1.000000 concrete_wall_004_2k.blend/textures/concrete_wall_004_nor_gl_2k.exr
+
+newmtl Wood
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd rosewood_veneer1_2k.blend/textures/rosewood_veneer1_diff_2k.jpg
+map_Ns rosewood_veneer1_2k.blend/textures/rosewood_veneer1_rough_2k.exr
+map_Bump -bm 1.000000 rosewood_veneer1_2k.blend/textures/rosewood_veneer1_nor_gl_2k.exr
