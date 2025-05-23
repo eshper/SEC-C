@@ -39,13 +39,16 @@ int main()
   }
 
   Shader shader("vertexShader.glsl", "fragmentShader.glsl");
+  Shader glassShader("vertexShader.glsl", "glassFragmentShader.glsl");
   // Model backpack("./Models/backpack/backpack.obj");
   // Model glass("./Models/glass/glass.glb");
   // Model table("./Models/table/round_table.obj");
   Model walls("./Models/walls/walls.obj");
+  // Model floor("./Models/floor/floor.obj");
+  Model glass("./Models/glass/glass.obj");
 
   glm::vec4 lightColor(1.0f, 1.0f, 1.0f, 1.0f);
-  glm::vec3 lightPos(3.0f, 3.0f, 3.0f);
+  glm::vec3 lightPos(0.0f, 0.0f, 3.0f);
   glm::mat4 lightModel(1.0f);
   lightModel = glm::translate(lightModel, lightPos);
 
@@ -59,9 +62,22 @@ int main()
   glUniformMatrix4fv(glGetUniformLocation(shader.ID, "model"), 1, GL_FALSE, glm::value_ptr(objectModel));
 
   glEnable(GL_DEPTH_TEST);
-
   Camera camera(WIDTH, HEIGHT, glm::vec3(0.0f, 0.0f, 2.0f));
+  // 1. Activate the shader
+  glassShader.Activate();
 
+  glUniform3f(glGetUniformLocation(glassShader.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+  glUniform4f(glGetUniformLocation(glassShader.ID, "lightColor"), lightColor.r, lightColor.g, lightColor.b, lightColor.a);
+  glUniform3f(glGetUniformLocation(glassShader.ID, "glassColor"), 0.8f, 0.9f, 1.0f);
+  glUniform1f(glGetUniformLocation(glassShader.ID, "transparency"), 0.4f);
+
+  glm::mat4 glassModel = glm::mat4(1.0f);
+  glassModel = glm::translate(glassModel, glm::vec3(0.0f, 0.0f, 0.0f)); // adjust as needed
+  glUniformMatrix4fv(glGetUniformLocation(glassShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(glassModel));
+
+  glEnable(GL_DEPTH_TEST);
+  glEnable(GL_BLEND);
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
   while (!glfwWindowShouldClose(window))
   {
     // start the frame timer
@@ -76,8 +92,14 @@ int main()
     // backpack.Draw(shader, camera);
     // glass.Draw(shader, camera);
     // table.Draw(shader, camera);
-    walls.Draw(shader, camera);
 
+    // floor.Draw(shader, camera);
+    walls.Draw(shader, camera);
+    glDepthMask(GL_FALSE);
+    glass.Draw(glassShader, camera);
+    glDepthMask(GL_TRUE);
+
+    // floor.Draw(shader, camera);
     glfwSwapBuffers(window); // Swap the front and back buffers
     glfwPollEvents();        // Poll for and process events
 
@@ -95,6 +117,7 @@ int main()
 
   // Cleanup
   shader.Delete();
+  glassShader.Delete();
   glfwDestroyWindow(window);
   glfwTerminate();
   return 0;

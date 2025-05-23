@@ -12,16 +12,6 @@ map_Kd concrete_tiles_02_4k.blend/textures/concrete_tiles_02_diff_4k.jpg
 map_Ns concrete_tiles_02_4k.blend/textures/concrete_tiles_02_rough_4k.exr
 map_Bump -bm 1.000000 concrete_tiles_02_4k.blend/textures/concrete_tiles_02_nor_gl_4k.exr
 
-newmtl Material
-Ns 1000.000000
-Ka 1.000000 1.000000 1.000000
-Kd 1.000000 1.000000 1.000000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-
 newmtl Material.001
 Ns 250.000000
 Ka 1.000000 1.000000 1.000000
@@ -29,16 +19,6 @@ Kd 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
-d 1.000000
-illum 2
-
-newmtl Material.002
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.800000 0.800000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.000000
 d 1.000000
 illum 2
 
@@ -74,3 +54,56 @@ illum 2
 map_Kd rosewood_veneer1_2k.blend/textures/rosewood_veneer1_diff_2k.jpg
 map_Ns rosewood_veneer1_2k.blend/textures/rosewood_veneer1_rough_2k.exr
 map_Bump -bm 1.000000 rosewood_veneer1_2k.blend/textures/rosewood_veneer1_nor_gl_2k.exr
+
+newmtl darkFloor
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Ns denmin_fabric_02_2k.blend/textures/denmin_fabric_02_rough_2k.exr
+map_Bump -bm 1.000000 denmin_fabric_02_2k.blend/textures/denmin_fabric_02_nor_gl_2k.exr
+
+newmtl darkerGlass
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.348503 0.321509 0.329666
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl floor
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Ns denmin_fabric_02_2k.blend/textures/denmin_fabric_02_rough_2k.exr
+map_Bump -bm 1.000000 denmin_fabric_02_2k.blend/textures/denmin_fabric_02_nor_gl_2k.exr
+
+newmtl glass
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl yellowFloor
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Ns denmin_fabric_02_2k.blend/textures/denmin_fabric_02_rough_2k.exr
+map_Bump -bm 1.000000 denmin_fabric_02_2k.blend/textures/denmin_fabric_02_nor_gl_2k.exr
