@@ -9,7 +9,7 @@ out vec4 Color;
 out vec3 FragPos;
 out vec3 Normal;
 out vec2 TexCoords;
-out vec4 FragPosLightSpace;
+out vec4 fragPosLightSpace;
 
 uniform mat4 camMatrix;
 uniform mat4 model;
