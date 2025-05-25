@@ -1,6 +1,6 @@
 #version 330 core
 
-#define MAX_POINT_LIGHTS 8
+#define MAX_POINT_LIGHTS 20
 
 struct DirectionalLight
 {
@@ -26,7 +26,7 @@ uniform sampler2D specular0;
 uniform sampler2D shadowMap;
 uniform float shine;
 uniform DirectionalLight directionalLight;
-uniform PointLight pointLights[MAX_POINT_LIGHTS];
+uniform PointLight pointlights[MAX_POINT_LIGHTS];
 uniform int numberOfPointLights;
 uniform vec3 camPos;
 
@@ -118,7 +118,7 @@ float calculateDirectionalShadow(vec4 fragPosLightSpace)
 
     float shadow = 0.0;
     vec2 texelSize = 1.0 / textureSize(shadowMap, 0);
-    
+
     for(int x = -1; x <= 1; x++)
     {
         for(int y = -1; y <= 1; y++)
@@ -143,7 +143,7 @@ void main()
 
     for(int i = 0; i < numberOfPointLights; i++)
     {
-        result += calculatePointLightColor(pointLights[i]);
+        result += calculatePointLightColor(pointlights[i]);
     }
     
     FragColor = vec4(result, 1.0);

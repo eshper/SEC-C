@@ -46,6 +46,9 @@
    file(COPY
        ${CMAKE_CURRENT_SOURCE_DIR}/vertexShader.glsl
        ${CMAKE_CURRENT_SOURCE_DIR}/fragmentShader.glsl
+       ${CMAKE_CURRENT_SOURCE_DIR}/glassFragmentShader.glsl
+       ${CMAKE_CURRENT_SOURCE_DIR}/simpleVertexDepthShader.glsl
+       ${CMAKE_CURRENT_SOURCE_DIR}/simpleFragmentDepthShader.glsl
        ${CMAKE_CURRENT_SOURCE_DIR}/Models
        ${CMAKE_CURRENT_SOURCE_DIR}/Textures
        ${CMAKE_CURRENT_SOURCE_DIR}/external

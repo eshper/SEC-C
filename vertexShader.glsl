@@ -21,7 +21,7 @@ void main()
 	Color = vec4(aColor, 1.0f);
     Normal = transpose(inverse(mat3(model))) * aNormal;
 	TexCoords = aTex;
-    FragPosLightSpace = lightSpaceMatrix * vec4(FragPos,1.0);
+    fragPosLightSpace = lightSpaceMatrix * vec4(FragPos,1.0);
 
 	gl_Position = camMatrix * vec4(FragPos, 1.0);
 }
