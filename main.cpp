@@ -53,6 +53,8 @@ int main()
   Model seatsRound("./Models/seats/seatRound.obj");
   Model seatsCubical("./Models/seats/seatCubical.obj");
   Model dividers("./Models/misc/dividers.obj");
+  Model railingHandles("./Models/misc/railings.obj");
+  Model railingGlass("./Models/glass/railings.obj");
 
   glm::vec4 lightColor(1.0f, 1.0f, 1.0f, 1.0f);
   glm::vec3 lightPos(0.0f, 0.0f, 3.0f);
@@ -107,9 +109,11 @@ int main()
     seatsRound.Draw(shader, camera);
     seatsCubical.Draw(shader, camera);
     dividers.Draw(shader, camera);
+    railingHandles.Draw(shader, camera);
 
     glDepthMask(GL_FALSE);
     glass.Draw(glassShader, camera);
+    railingGlass.Draw(glassShader, camera);
     glDepthMask(GL_TRUE);
 
     glfwSwapBuffers(window); // Swap the front and back buffers
