@@ -1,0 +1,95 @@
+# Blender 4.4.0 MTL File: 'ITKiosk.blend'
+# www.blender.org
+
+newmtl LimeLeather
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd leather_lime_diff_1k.jpg
+
+newmtl PurpleLeather
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd leather_purple.jpg
+
+newmtl RedLeather
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd leather_red.jpg
+
+newmtl TurquoiseLeather
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd leather_turqouise.jpg
+
+newmtl YellowLeather
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd leather_yellow_diff_1k.png
+
+newmtl YellowLeather.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd leather_blue_diff_1k.jpg
+
+newmtl darkFloor
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd DarkGray.jpg
+map_Ns denmin_fabric_02_rough_2k.exr
+map_Bump -bm 1.000000 denmin_fabric_02_nor_gl_2k.exr
+
+newmtl floor
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Gray.jpg
+map_Ns denmin_fabric_02_rough_2k.exr
+map_Bump -bm 1.000000 denmin_fabric_02_nor_gl_2k.exr
+
+newmtl yellowFloor
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Yellow.jpg
+map_Ns denmin_fabric_02_rough_2k.exr
+map_Bump -bm 1.000000 denmin_fabric_02_nor_gl_2k.exr

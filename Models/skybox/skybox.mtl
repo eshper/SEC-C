@@ -1,0 +1,22 @@
+# Blender 4.0.2 MTL File: 'base.blend'
+# www.blender.org
+
+newmtl istockphoto-155359167-612x612
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd ./tex/office.jpg
+map_d ./tex/office.jpg
+
+newmtl sky
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 2
+map_Kd ./tex/sky.jpeg
+map_d ./tex/sky.jpeg
