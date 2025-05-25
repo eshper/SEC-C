@@ -59,9 +59,9 @@ int main() {
 
   PointLight pointLight1;
   pointLight1.position = glm::vec3(49.156f, 3.4302f, 13.753f);
-  pointLight1.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight1.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight1.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight1.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight1.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight1.constant = 1.0f;
   pointLight1.linear = 0.014f;
   pointLight1.quadratic = 0.032f;
@@ -69,9 +69,9 @@ int main() {
 
   PointLight pointLight2;
   pointLight2.position = glm::vec3(45.783f, 3.4302f, -24.184f);
-  pointLight2.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
-  pointLight2.diffuse = glm::vec3(2.6f, 2.8f, 2.0f);
-  pointLight2.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight2.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
+  pointLight2.diffuse = glm::vec3(4.0006f, 2.8f, 2.0f);
+  pointLight2.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight2.constant = 1.0f;
   pointLight2.linear = 0.014f;
   pointLight2.quadratic = 0.032f;
@@ -79,9 +79,9 @@ int main() {
 
   PointLight pointLight3;
   pointLight3.position = glm::vec3(35.887f, 3.4302f, -24.184f);
-  pointLight3.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight3.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight3.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight3.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight3.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight3.constant = 1.0f;
   pointLight3.linear = 0.014f;
   pointLight3.quadratic = 0.032f;
@@ -89,9 +89,9 @@ int main() {
 
   PointLight pointLight4;
   pointLight4.position = glm::vec3(24.71f, 3.4302f, -24.184f);
-  pointLight4.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight4.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight4.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight4.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight4.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight4.constant = 1.0f;
   pointLight4.linear = 0.014f;
   pointLight4.quadratic = 0.032f;
@@ -99,9 +99,9 @@ int main() {
 
   PointLight pointLight5;
   pointLight5.position = glm::vec3(14.732f, 3.4302f, -24.184f);
-  pointLight5.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight5.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight5.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight5.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight5.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight5.constant = 1.0f;
   pointLight5.linear = 0.014f;
   pointLight5.quadratic = 0.032f;
@@ -109,9 +109,9 @@ int main() {
 
   PointLight pointLight6;
   pointLight6.position = glm::vec3(3.6975f, 3.4302f, -24.184f);
-  pointLight6.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight6.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight6.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight6.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight6.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight6.constant = 1.0f;
   pointLight6.linear = 0.014f;
   pointLight6.quadratic = 0.032f;
@@ -119,9 +119,9 @@ int main() {
 
   PointLight pointLight7;
   pointLight7.position = glm::vec3(-6.0746f, 3.4302f, -24.184f);
-  pointLight7.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight7.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight7.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight7.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight7.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight7.constant = 1.0f;
   pointLight7.linear = 0.014f;
   pointLight7.quadratic = 0.032f;
@@ -129,9 +129,9 @@ int main() {
 
   PointLight pointLight8;
   pointLight8.position = glm::vec3(-17.342f, 3.4302f, -24.184f);
-  pointLight8.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight8.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight8.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight8.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight8.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight8.constant = 1.0f;
   pointLight8.linear = 0.014f;
   pointLight8.quadratic = 0.032f;
@@ -139,9 +139,9 @@ int main() {
 
   PointLight pointLight9;
   pointLight9.position = glm::vec3(-27.143f, 3.4302f, -24.184f);
-  pointLight9.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight9.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight9.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight9.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight9.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight9.constant = 1.0f;
   pointLight9.linear = 0.014f;
   pointLight9.quadratic = 0.032f;
@@ -149,9 +149,9 @@ int main() {
 
   PointLight pointLight10;
   pointLight10.position = glm::vec3(-38.407f, 3.4302f, -24.184f);
-  pointLight10.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight10.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight10.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight10.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight10.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight10.constant = 1.0f;
   pointLight10.linear = 0.014f;
   pointLight10.quadratic = 0.032f;
@@ -159,9 +159,9 @@ int main() {
 
   PointLight pointLight11;
   pointLight11.position = glm::vec3(-48.057f, 3.4302f, -24.184f);
-  pointLight11.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight11.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight11.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight11.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight11.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight11.constant = 1.0f;
   pointLight11.linear = 0.014f;
   pointLight11.quadratic = 0.032f;
@@ -169,9 +169,9 @@ int main() {
 
   PointLight pointLight12;
   pointLight12.position = glm::vec3(39.539f, 3.4302f, 13.753f);
-  pointLight12.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight12.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight12.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight12.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight12.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight12.constant = 1.0f;
   pointLight12.linear = 0.014f;
   pointLight12.quadratic = 0.032f;
@@ -179,9 +179,9 @@ int main() {
 
   PointLight pointLight13;
   pointLight13.position = glm::vec3(28.277f, 3.4302f, 13.753f);
-  pointLight13.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight13.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight13.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight13.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight13.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight13.constant = 1.0f;
   pointLight13.linear = 0.014f;
   pointLight13.quadratic = 0.032f;
@@ -189,9 +189,9 @@ int main() {
 
   PointLight pointLight14;
   pointLight14.position = glm::vec3(18.542f, 3.4302f, 13.753f);
-  pointLight14.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight14.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight14.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight14.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight14.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight14.constant = 1.0f;
   pointLight14.linear = 0.014f;
   pointLight14.quadratic = 0.032f;
@@ -199,9 +199,9 @@ int main() {
 
   PointLight pointLight15;
   pointLight15.position = glm::vec3(7.2412f, 3.4302f, 13.753f);
-  pointLight15.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight15.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight15.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight15.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight15.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight15.constant = 1.0f;
   pointLight15.linear = 0.014f;
   pointLight15.quadratic = 0.032f;
@@ -209,9 +209,9 @@ int main() {
 
   PointLight pointLight16;
   pointLight16.position = glm::vec3(-2.586f, 3.4302f, 13.753f);
-  pointLight16.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight16.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight16.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight16.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight16.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight16.constant = 1.0f;
   pointLight16.linear = 0.014f;
   pointLight16.quadratic = 0.032f;
@@ -219,9 +219,9 @@ int main() {
 
   PointLight pointLight17;
   pointLight17.position = glm::vec3(-13.619f, 3.4302f, 13.753f);
-  pointLight17.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight17.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight17.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight17.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight17.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight17.constant = 1.0f;
   pointLight17.linear = 0.014f;
   pointLight17.quadratic = 0.032f;
@@ -229,9 +229,9 @@ int main() {
 
   PointLight pointLight18;
   pointLight18.position = glm::vec3(-23.528f, 3.4302f, 13.753f);
-  pointLight18.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight18.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight18.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight18.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight18.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight18.constant = 1.0f;
   pointLight18.linear = 0.014f;
   pointLight18.quadratic = 0.032f;
@@ -239,9 +239,9 @@ int main() {
 
   PointLight pointLight19;
   pointLight19.position = glm::vec3(-34.792f, 3.4302f, 13.753f);
-  pointLight19.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight19.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight19.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight19.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight19.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight19.constant = 1.0f;
   pointLight19.linear = 0.014f;
   pointLight19.quadratic = 0.032f;
@@ -249,9 +249,9 @@ int main() {
 
   PointLight pointLight20;
   pointLight20.position = glm::vec3(-44.688f, 3.4302f, 13.753f);
-  pointLight20.ambient = glm::vec3(3.8f, 3.8f, 3.8f);
+  pointLight20.ambient = glm::vec3(4.00007f, 4.00007f, 4.00007f);
   pointLight20.diffuse = glm::vec3(4.0006f, 4.0006f, 4.0006f);
-  pointLight20.specular = glm::vec3(8.0f, 8.0f, 8.0f);
+  pointLight20.specular = glm::vec3(2.000005f, 2.000005f, 2.000005f);
   pointLight20.constant = 1.0f;
   pointLight20.linear = 0.014f;
   pointLight20.quadratic = 0.032f;
@@ -282,8 +282,6 @@ int main() {
 
   setupShaderUniforms(shader, pointlights);
   glm::vec3 directionalLightDirection(-0.2f, -1.0f, -0.3f);
-  // glm::vec3 directionalLightDirection(0.2f, -1.0f, -0.3f);
-  // glm::vec3 directionalLightDirection(0.2f, 1.0f, -0.3f);
 
   Camera camera(WIDTH, HEIGHT, glm::vec3(0.0f, 0.0f, 2.0f));
 
@@ -296,6 +294,9 @@ int main() {
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+  float sunAngle = 0.0f;
+  float sunSpeed = 0.02f;
+
   while (!glfwWindowShouldClose(window)) {
     auto frameStart = std::chrono::high_resolution_clock::now();
 
@@ -305,13 +306,24 @@ int main() {
     camera.Inputs(window);
     camera.updateMatrix(45.0f, 0.1f, 100.0f);
 
+    if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS) {
+      sunAngle -= sunSpeed;
+    }
+    if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS) {
+      sunAngle += sunSpeed;
+    }
+
+    directionalLightDirection.x = sin(sunAngle);
+    directionalLightDirection.y = -cos(sunAngle);
+    directionalLightDirection = glm::normalize(directionalLightDirection);
+
     glm::mat4 lightProjection, lightView;
     glm::mat4 lightSpaceMatrix;
-    float near_plane = 1.0f, far_plane = 7.5f;
+    float near_plane = 1.0f, far_plane = 500.0f;
 
-    glm::vec3 lightPosition = -directionalLightDirection * 5.0f;
+    glm::vec3 lightPosition = -directionalLightDirection * 150.0f;
     lightProjection =
-        glm::ortho(-10.0f, 10.0f, -10.0f, 10.0f, near_plane, far_plane);
+        glm::ortho(-60.0f, 60.0f, -25.0f, 25.0f, near_plane, far_plane);
     lightView =
         glm::lookAt(lightPosition, glm::vec3(0.0f), glm::vec3(0.0, 1.0, 0.0));
     lightSpaceMatrix = lightProjection * lightView;
@@ -348,18 +360,15 @@ int main() {
     glUniform3f(glGetUniformLocation(shader.ID, "directionalLight.direction"),
                 directionalLightDirection.x, directionalLightDirection.y,
                 directionalLightDirection.z);
+
     glUniform3f(glGetUniformLocation(shader.ID, "directionalLight.ambient"),
-                0.1f, 0.1f, 0.1f);
+                0.15f, 0.15f, 0.15f);
 
-    // glUniform3f(glGetUniformLocation(shader.ID, "directionalLight.diffuse"),
-    //             7.5f, 7.5f, 7.5f);
     glUniform3f(glGetUniformLocation(shader.ID, "directionalLight.diffuse"),
-                1.5f, 1.5f, 1.5f);
+                2.5f, 2.5f, 2.5f);
 
-    // glUniform3f(glGetUniformLocation(shader.ID, "directionalLight.specular"),
-    //             1.0f, 1.0f, 1.0f);
     glUniform3f(glGetUniformLocation(shader.ID, "directionalLight.specular"),
-                1.0f, 1.0f, 1.0f);
+                1.2f, 1.2f, 1.2f);
 
     glUniform1i(glGetUniformLocation(shader.ID, "numberOfPointLights"),
                 static_cast<int>(pointlights.size()));
