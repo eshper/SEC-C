@@ -17,8 +17,7 @@ const int HEIGHT = 1200;
 const int FPS = 60;
 const std::chrono::duration<double, std::milli> FRAME_DURATION(1000.0 / FPS);
 
-struct PointLight
-{
+struct PointLight {
   glm::vec3 position;
   glm::vec3 ambient;
   glm::vec3 diffuse;
@@ -35,15 +34,11 @@ void setupShaderUniforms(Shader &shader,
 void setupGlassShader(Shader &glassShader, const glm::vec4 &lightColor,
                       const glm::vec3 &lightPos, Camera &camera);
 
-int main()
-{
+int main() {
   GLFWwindow *window;
-  try
-  {
+  try {
     window = initializeOpenGL();
-  }
-  catch (const char *error)
-  {
+  } catch (const char *error) {
     std::cerr << "Initialization error: " << error << std::endl;
     return -1;
   }
@@ -272,7 +267,7 @@ int main()
   pointLight20.quadratic = 0.032f;
   pointlights.push_back(pointLight20);
 
-  const unsigned int SHADOW_WIDTH = 1024, SHADOW_HEIGHT = 1024;
+  const unsigned int SHADOW_WIDTH = 2048, SHADOW_HEIGHT = 2048;
   unsigned int depthMapFBO;
   glGenFramebuffers(1, &depthMapFBO);
 
@@ -303,7 +298,7 @@ int main()
   // Glass specific code
   glm::vec4 lightColor(1.0f, 1.0f, 1.0f, 1.0f);
   glm::vec3 objectPos(0.0f, 0.0f, 0.0f);
-  glm::vec3 lightPos(0.0f, 0.0f, 3.0f);
+  glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
   setupGlassShader(glassShader, lightColor, lightPos, camera);
 
   glEnable(GL_BLEND);
@@ -312,8 +307,7 @@ int main()
   float sunAngle = 0.0f;
   float sunSpeed = 0.02f;
 
-  while (!glfwWindowShouldClose(window))
-  {
+  while (!glfwWindowShouldClose(window)) {
     auto frameStart = std::chrono::high_resolution_clock::now();
 
     glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
@@ -322,12 +316,10 @@ int main()
     camera.Inputs(window);
     camera.updateMatrix(45.0f, 0.1f, 100.0f);
 
-    if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS)
-    {
+    if (glfwGetKey(window, GLFW_KEY_K) == GLFW_PRESS) {
       sunAngle -= sunSpeed;
     }
-    if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS)
-    {
+    if (glfwGetKey(window, GLFW_KEY_J) == GLFW_PRESS) {
       sunAngle += sunSpeed;
     }
 
@@ -341,7 +333,7 @@ int main()
 
     glm::vec3 lightPosition = -directionalLightDirection * 150.0f;
     lightProjection =
-        glm::ortho(-60.0f, 60.0f, -25.0f, 25.0f, near_plane, far_plane);
+        glm::ortho(-100.0f, 100.0f, -50.0f, 50.0f, near_plane, far_plane);
     lightView =
         glm::lookAt(lightPosition, glm::vec3(0.0f), glm::vec3(0.0, 1.0, 0.0));
     lightSpaceMatrix = lightProjection * lightView;
@@ -359,12 +351,8 @@ int main()
     glUniformMatrix4fv(glGetUniformLocation(simpleDepthShader.ID, "model"), 1,
                        GL_FALSE, glm::value_ptr(wallsModel));
 
-    glBindFramebuffer(GL_FRAMEBUFFER, 0);
-
     floor.Draw(simpleDepthShader, camera);
     walls.Draw(simpleDepthShader, camera);
-    // skybox.Draw(simpleDepthShader, camera);
-
     tablesCirc.Draw(simpleDepthShader, camera);
     tablesLong.Draw(simpleDepthShader, camera);
     tablesOval.Draw(simpleDepthShader, camera);
@@ -373,6 +361,8 @@ int main()
     seatsCubical.Draw(simpleDepthShader, camera);
     dividers.Draw(simpleDepthShader, camera);
     railingHandles.Draw(simpleDepthShader, camera);
+
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
     glViewport(0, 0, WIDTH, HEIGHT);
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -401,8 +391,7 @@ int main()
     glUniform1i(glGetUniformLocation(shader.ID, "numberOfPointLights"),
                 static_cast<int>(pointlights.size()));
 
-    for (size_t i = 0; i < pointlights.size(); ++i)
-    {
+    for (size_t i = 0; i < pointlights.size(); ++i) {
       std::string base = "pointlights[" + std::to_string(i) + "]";
       glUniform3f(glGetUniformLocation(shader.ID, (base + ".position").c_str()),
                   pointlights[i].position.x, pointlights[i].position.y,
@@ -427,7 +416,7 @@ int main()
 
     glUniform3f(glGetUniformLocation(shader.ID, "camPos"), camera.Position.x,
                 camera.Position.y, camera.Position.z);
-    glUniform1f(glGetUniformLocation(shader.ID, "shine"), 32.0f);
+    glUniform1f(glGetUniformLocation(shader.ID, "shine"), 132.0f);
     glUniformMatrix4fv(glGetUniformLocation(shader.ID, "lightSpaceMatrix"), 1,
                        GL_FALSE, glm::value_ptr(lightSpaceMatrix));
 
@@ -435,31 +424,28 @@ int main()
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, depthMap);
 
+    skybox.Draw(shader, camera);
     floor.Draw(shader, camera);
     walls.Draw(shader, camera);
-    skybox.Draw(shader, camera);
-
+    dividers.Draw(shader, camera);
     tablesCirc.Draw(shader, camera);
     tablesLong.Draw(shader, camera);
     tablesOval.Draw(shader, camera);
     seatsSquare.Draw(shader, camera);
     seatsRound.Draw(shader, camera);
     seatsCubical.Draw(shader, camera);
-    dividers.Draw(shader, camera);
     railingHandles.Draw(shader, camera);
 
     glDepthMask(GL_FALSE);
-    glass.Draw(glassShader, camera);
     railingGlass.Draw(glassShader, camera);
+    glass.Draw(glassShader, camera);
     glDepthMask(GL_TRUE);
-
     glfwSwapBuffers(window);
     glfwPollEvents();
 
     auto frameEnd = std::chrono::high_resolution_clock::now();
     auto frameTime = frameEnd - frameStart;
-    if (frameTime < FRAME_DURATION)
-    {
+    if (frameTime < FRAME_DURATION) {
       std::this_thread::sleep_for(FRAME_DURATION - frameTime);
     }
   }
@@ -473,16 +459,14 @@ int main()
   return 0;
 }
 
-const char *getError()
-{
+const char *getError() {
   const char *errorDescription;
   glfwGetError(&errorDescription);
   return errorDescription;
 }
 
 void setupShaderUniforms(Shader &shader,
-                         const std::vector<PointLight> &pointlights)
-{
+                         const std::vector<PointLight> &pointlights) {
   shader.Activate();
 
   glUniform1i(glGetUniformLocation(shader.ID, "diffuse0"), 0);
@@ -491,8 +475,7 @@ void setupShaderUniforms(Shader &shader,
 }
 
 void setupGlassShader(Shader &glassShader, const glm::vec4 &lightColor,
-                      const glm::vec3 &lightPos, Camera &camera)
-{
+                      const glm::vec3 &lightPos, Camera &camera) {
   glassShader.Activate();
   glUniformMatrix4fv(glGetUniformLocation(glassShader.ID, "camMatrix"), 1,
                      GL_FALSE, glm::value_ptr(camera.camMatrix));
@@ -510,10 +493,8 @@ void setupGlassShader(Shader &glassShader, const glm::vec4 &lightColor,
                      glm::value_ptr(glassModel));
 }
 
-GLFWwindow *initializeOpenGL()
-{
-  if (!glfwInit())
-  {
+GLFWwindow *initializeOpenGL() {
+  if (!glfwInit()) {
     throw getError();
   }
 
@@ -525,8 +506,7 @@ GLFWwindow *initializeOpenGL()
 
   GLFWwindow *window =
       glfwCreateWindow(WIDTH, HEIGHT, "SEC-C", nullptr, nullptr);
-  if (window == nullptr)
-  {
+  if (window == nullptr) {
     glfwTerminate();
     throw "Failed to create GLFW window. Your GPU may not support OpenGL 3.3.";
   }
@@ -534,8 +514,7 @@ GLFWwindow *initializeOpenGL()
   glfwMakeContextCurrent(window);
 
   glewExperimental = true;
-  if (glewInit() != GLEW_OK)
-  {
+  if (glewInit() != GLEW_OK) {
     glfwDestroyWindow(window);
     glfwTerminate();
     throw "Failed to initialize GLEW.";

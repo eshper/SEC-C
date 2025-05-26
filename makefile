@@ -14,3 +14,10 @@ all:
 	make clean
 	make
 	make run
+
+for_chris:
+	mkdir -p build
+	cd build && cmake .. && make && ./Assignment 
+
+clean_for_chris:
+	rm -rf build
